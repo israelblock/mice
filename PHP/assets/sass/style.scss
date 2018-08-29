@@ -1,0 +1,313 @@
+/**
+Arquivo SCSS para o tema MiceONline. 
+O arquivo compilado em css se encontra na pasta assets/css/ e recebe o mesmo nome que este arquivo.
+*/
+
+/*normalizar*/
+$link: #c03535;
+$redcover: #be2e2f;
+$white: #ffffff;
+$bg-dark: #77797b;
+$bg-silver: #e5e5e5;
+
+*{
+    margin:0;
+    padding:0;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+a{
+    color:$white;
+    transition: all 1s;
+    h2{
+        font-weight: 500;
+        font-size: 16pt;
+        &:hover{
+            color:$link;
+        }
+    }
+    &:hover{
+        color:$link;
+    }
+}
+.container-fluid{
+    margin-bottom: 16px;
+    &#anunciante{
+        background: url('../images/anunciante.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 100px 0;
+        h1{
+            font-size:45pt;
+            color: $white;
+            text-shadow: 1px 1px 1px $bg-dark;
+            font-weight: 700;
+        }
+    }
+    &.bg-dark{
+        background: $bg-dark !important;
+        margin-top:-16px;
+        padding-bottom: 50px;
+        &#header-fluid{
+            padding-bottom: 0;
+        }
+    }
+    &.bg-silver{
+        background: $bg-silver !important;
+        margin-top:-16px;
+        padding-bottom: 50px;
+        &#header-fluid{
+            padding-bottom: 0;
+        }
+    }
+    .container{
+        @media screen and (min-width: 1220px){
+            width:1200px !important;
+        }
+        .subheader{
+            .subheader-infos{
+                .subheader-infos-fones, .subheader-infos-contato{
+                    .icones{
+                            margin: 30px 15px 15px;
+                            padding-top: 0;
+                            position: relative;
+                            top: -10px;
+                    }
+                    .subheader-content{
+                        font-family: 'Abel', sans-serif;
+                        font-size: 10pt;
+                        color: $link;
+                        span#spancontato{
+                            position: relative;
+                            top:-10px;
+                            font-size:12pt;
+                        }
+                    }
+                }
+            }
+            .subheader-social{
+                .icones{
+                    margin: 22px 15px 0px;
+                    padding-top: 0;
+                    position: relative;
+                    top: -10px;
+                }
+            }
+        }
+        #lasted-posts{
+            .posts-more-image{
+                position: relative;
+                img{
+                    position: relative;
+                }
+                img.more{
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                }
+            }
+        }
+        #services{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            h1{
+                padding-bottom: 25px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .services-posts{
+                .img-service{
+                    width: 275px;
+                    height: 295px;
+                    overflow: hidden;
+                    img{
+                        //transform: translate(-30%, 0);
+                        vertical-align: middle;
+                        transition: all 1s;
+                        float: right;
+                        &:hover{
+                            transform: scale(1.1, 1.1);
+                        }
+                    }
+                }
+                h2{
+                    font-weight: 700;
+                    font-size: 20pt;
+                    text-align: center;
+                }
+            }
+        }
+        #about, #videos, #events{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            h1{
+                padding-bottom: 25px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+        #events{
+            .event-cover{
+                background: $redcover;
+                width: 100%;
+                color:$white;
+                height: 160px;
+            }
+        }
+    }
+}
+.navbar-dark{
+    .navbar-nav{
+        font-family: 'Abel', sans-serif;
+        text-transform: uppercase;
+        font-size: 13pt;
+        .active>.nav-link,.nav-link.active,.nav-link.show,.show>.nav-link {
+            color: $link;
+        }
+        .nav-link{
+            color:$white;
+            &:hover{
+                color: $link;
+            }
+        }
+        .nav-item{
+            padding: 25px 0;
+            &.active{
+                border-bottom: 2px solid $link;
+                font-weight: 600;
+            }
+        }
+    }
+}
+hr.whiteline{
+    margin-top: -10px;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid $white;
+}
+#banner-home {
+    margin: 0;
+    padding: 50px 0;
+    .slick-arrow{
+
+        &.slick-next{
+            left: 60px !important;
+            transform: translate(0, 250px) !important;
+            z-index:9999;
+            &::before{
+                font-family: 'Font Awesome 5 Free';
+                content: "\f105";
+                background: $link;
+                padding: 15px;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            @media screen and (max-width: 989px){
+                transform: translate(0, 150px) !important;
+            }
+        }
+        &.slick-prev{
+            left: 0px !important;
+            transform: translate(0, 250px) !important;
+            z-index:9999;
+            &::before{
+                font-family: 'Font Awesome 5 Free';
+                content: "\f104";
+                background: $link;
+                padding: 15px;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            @media screen and (max-width: 989px){
+                transform: translate(0, 150px) !important;
+            }
+        }
+    }
+    .slick-slide{
+        img{
+            float: right;
+            position: relative;
+            @media screen and (max-width: 989px){
+                width: 70%;
+            }
+        }
+        .content-banner{
+            position: absolute;
+            display: block;
+            width: 600px;
+            transform: translate(0, 60%);
+            color:$white;
+            font-family: 'Open Sans Condensed', sans-serif;
+            letter-spacing: 0px;
+            .title-1{
+                font-size: 40pt;
+                font-weight: 700;
+                text-transform: uppercase;
+                @media screen and (max-width: 989px){
+                   font-size:20pt;
+                }
+            }
+            .title-2{
+                font-size: 12pt;
+                margin-bottom: 25px;
+                @media screen and (max-width: 989px){
+                    font-size: 10pt;
+                }
+            }
+            .categoria-banner{
+                font-size: 16pt;
+                background: $link;
+                padding: 10px 15px;
+                position: relative;
+                top:-30px;
+                @media screen and (max-width: 989px){
+                    font-size: 12pt;
+                }
+            }
+            @media screen and (max-width: 768px){
+                width:100%;
+            }
+        }
+    }
+}
+.date{
+    &::before{
+        content: "";
+        background: url(../images/icons/date.png);
+        background-repeat: no-repeat;
+        width: 25px;
+        display: inline-block;
+        padding: 8px;
+    }
+}
+.superupper{
+    font-size:80pt;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.superupper-event{
+    font-size:60pt;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+}
+.upper{
+    font-size:20pt;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.upper-event{
+    font-size:20pt;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    top: -30px;
+}
+.hr{
+    border-bottom: 1px $link solid;
+    width: 100%;
+    padding: 1px;
+    margin: 80px 0;
+}

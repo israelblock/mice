@@ -1,0 +1,15 @@
+{
+  "name": "miceonline",
+  "version": "1.0.0",
+  "description": "Projeto para MiceOnline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -w PHP/assets/sass -o PHP/assets/css --output-style compressed"
+  },
+  "author": "Dev2 Comunicação Integrada",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
