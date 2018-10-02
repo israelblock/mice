@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -w PHP/assets/sass -o PHP/assets/css --output-style compressed"
+    "scss": "node-sass -w PHP/assets/sass -o PHP/assets/css --output-style compressed",
+    "scss2": "node-sass -w WordPress/wp-content/themes/miceonline/assets/sass -o WordPress/wp-content/themes/miceonline/assets/css --output-style compressed"
   },
   "author": "Dev2 Comunicação Integrada",
   "license": "ISC",

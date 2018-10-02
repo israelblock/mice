@@ -16,46 +16,57 @@
 <body>
     <div class="container-fluid">
         <div class="container">
-            <section class="subheader d-block">
-                <div class="subheader-infos float-left">
-                    <div class="subheader-infos-fones d-inline-block">
-                        <div class="icones d-inline-block">
-                            <img src="assets/images/icons/whats.png" />
+            <div class="row">
+                <div class="col-md-8">
+                    <section class="subheader d-block">
+                        <div class="subheader-infos float-left">
+                            <div class="subheader-infos-fones d-inline-block">
+                                <div class="icones d-inline-block">
+                                    <img src="assets/images/icons/whats.png" />
+                                </div>
+                                <div class="subheader-content d-inline-block">
+                                    +55 41 99999.9999<br>+55 41 99999.9999
+                                </div>
+                            </div>
+                            <div class="subheader-infos-contato d-inline-block">
+                                <div class="icones d-inline-block">
+                                    <img src="assets/images/icons/mail.png" />
+                                </div>
+                                <div class="subheader-content d-inline-block">
+                                    <span id="spancontato">contato@miceonline.com.br</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="subheader-content d-inline-block">
-                            +55 41 99999.9999<br>+55 41 99999.9999
-                        </div>
-                    </div>
-                    <div class="subheader-infos-contato d-inline-block">
-                        <div class="icones d-inline-block">
-                            <img src="assets/images/icons/mail.png" />
-                        </div>
-                        <div class="subheader-content d-inline-block">
-                            <span id="spancontato">contato@miceonline.com.br</span>
-                        </div>
-                    </div>
+                    </section>
                 </div>
-                <div class="subheader-social float-right">
-                    <div class="icones d-inline-block">
-                        <img src="assets/images/icons/barra.png" />
-                    </div>
-                    <div class="icones d-inline-block">
-                        <img src="assets/images/icons/fb.png" />
-                    </div>
-                    <div class="icones d-inline-block">
-                        <img src="assets/images/icons/tt.png" />
-                    </div>
-                    <div class="icones d-inline-block">
-                        <img src="assets/images/icons/yt.png" />
-                    </div>
-                    <div class="icones d-inline-block">
-                        <img src="assets/images/icons/gplus.png" />
-                    </div>
-                    <div class="icones d-inline-block">
-                        <img src="assets/images/icons/barra.png" />
-                    </div>
+                <div class="col-12 col-sm-12 col-md-4">
+                    <section class="subheader d-block">
+                        <div class="subheader-social text-center">
+                            <div class="row">
+                                <div class="col-2 col-sm-2 col-md-2">
+                                    <img src="assets/images/icons/barra.png" />
+                                </div>
+                                <div class="col-2 col-sm-2 col-md-2">
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                                <div class="col-2 col-sm-2 col-md-2">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                </div>
+                                <div class="col-2 col-sm-2 col-md-2">
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                </div>
+                                <div class="col-2 col-sm-2 col-md-2">
+                                    <a href=""><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                                <div class="col-2 col-sm-2 col-md-2">
+                                    <img src="assets/images/icons/barra.png" />
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
                 </div>
-            </section>
+            </div>   
             <div class="clearfix">&nbsp;</div>
         </div>
     </div>

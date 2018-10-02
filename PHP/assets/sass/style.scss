@@ -9,6 +9,8 @@ $redcover: #be2e2f;
 $white: #ffffff;
 $bg-dark: #77797b;
 $bg-silver: #e5e5e5;
+$bg-footer:#606060;
+$footer-social-color: #561111;
 
 *{
     margin:0;
@@ -32,7 +34,8 @@ a{
     }
 }
 .container-fluid{
-    margin-bottom: 16px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
     &#anunciante{
         background: url('../images/anunciante.png');
         background-size: cover;
@@ -60,6 +63,21 @@ a{
         padding-bottom: 50px;
         &#header-fluid{
             padding-bottom: 0;
+        }
+    }
+    &#footer{
+        margin-bottom: 16px;
+        background: $bg-footer;
+        padding-top:20px !important;
+        padding-bottom: 100px !important;
+        .footer-row{
+            padding-top:50px;
+        }
+        .footer-widget{
+            color:$white;
+            i{
+                font-size:40px;
+            }
         }
     }
     .container{
@@ -109,14 +127,16 @@ a{
                 }
             }
         }
-        #services{
+        #about, #videos, #events, #partners, #services{
             padding-top: 50px;
             padding-bottom: 50px;
             h1{
-                padding-bottom: 25px;
-                font-weight: 700;
-                text-transform: uppercase;
+                padding-bottom: 25px !important;
+                font-weight: 700 !important;
+                text-transform: uppercase !important;
             }
+        }
+        #services{
             .services-posts{
                 .img-service{
                     width: 275px;
@@ -139,21 +159,72 @@ a{
                 }
             }
         }
-        #about, #videos, #events{
-            padding-top: 50px;
-            padding-bottom: 50px;
-            h1{
-                padding-bottom: 25px;
-                font-weight: 700;
-                text-transform: uppercase;
+        #events{
+            .container-event{
+                margin-bottom: 50px;
+                .event-cover{
+                    background: $redcover;
+                    width: 100%;
+                    color:$white;
+                    height: 160px;
+                }
+                .content-event{
+                    span{
+                        font-family: 'Open Sans Condensed', sans-serif;
+                        font-size: 11pt;
+                    }
+                }
             }
         }
-        #events{
-            .event-cover{
-                background: $redcover;
-                width: 100%;
-                color:$white;
-                height: 160px;
+        #partners{
+            .partners-slick{
+                .partner-item{
+                    width: 100%;
+                    background: #e5e5e5;
+                    display: block;
+                    margin:0 auto;
+                    padding: 20px;
+                    text-align: center;
+                }
+                .slick-arrow{
+                    &.slick-next{
+                        /*left: 60px !important;
+                        transform: translate(0, 250px) !important;*/
+                        z-index:9999;
+                        right: 15px !important;
+                        &::before{
+                            font-family: 'Font Awesome 5 Free';
+                            content: "\f105";
+                            background: transparent;
+                            padding: 15px;
+                            font-size: 25px;
+                            font-weight: bold;
+                            color:$bg-dark;
+                        }
+                        @media screen and (max-width: 989px){
+                            /*transform: translate(0, 150px) !important;*/
+                        }
+                    }
+                    &.slick-prev{
+                        /*left: 0px !important;
+                        transform: translate(0, 250px) !important;*/
+                        z-index:9999;
+                        left:-5px !important;
+                        &::before{
+                            font-family: 'Font Awesome 5 Free';
+                            content: "\f104";
+                            background: transparent;
+                            padding: 15px;
+                            font-size: 25px;
+                            font-weight: bold;
+                            color:$bg-dark;
+                            
+                        }
+                        @media screen and (max-width: 989px){
+                            /*transform: translate(0, 150px) !important;*/
+                        }
+                    }
+                }
             }
         }
     }
@@ -282,6 +353,16 @@ hr.whiteline{
         padding: 8px;
     }
 }
+.local{
+    &::before{
+        content: "";
+        background: url(../images/icons/map.png);
+        background-repeat: no-repeat;
+        width: 25px;
+        display: inline-block;
+        padding: 8px;
+    }
+}
 .superupper{
     font-size:80pt;
     text-transform: uppercase;
@@ -304,10 +385,40 @@ hr.whiteline{
     font-weight: 700;
     position: relative;
     top: -30px;
+    &.cat{
+        font-size: 14pt !important;
+        color:$link;
+        top:0;
+        line-height: 35pt;
+    }
 }
 .hr{
     border-bottom: 1px $link solid;
     width: 100%;
     padding: 1px;
     margin: 80px 0;
+}
+.footer-social{
+    i{
+        color:$footer-social-color;
+        font-size: 30px;
+    }
+    .backtotop{
+        background: $footer-social-color;
+        text-align: center;
+        margin: -16px 0;
+        padding: 16px;
+        cursor: pointer;
+        i{
+            color:$white;
+            
+        }
+    }
+}
+.subheader-social{
+    margin: 12px 00px 0px;
+    i{
+        color:$footer-social-color;
+        font-size: 30px;
+    }
 }
